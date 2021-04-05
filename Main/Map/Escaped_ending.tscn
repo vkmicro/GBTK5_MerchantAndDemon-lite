@@ -21,8 +21,9 @@ __meta__ = {
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-
-[node name="Credits" parent="Panel" instance=ExtResource( 1 )]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 anchor_right = 1.0
@@ -61,5 +62,8 @@ margin_right = 1024.0
 margin_bottom = 736.0
 custom_fonts/font = SubResource( 2 )
 text = "Send_a_fuck_you_message_to_dev_and_quit(10)"
+
+[node name="Credits" parent="." instance=ExtResource( 1 )]
+visible = false
 [connection signal="pressed" from="Panel/VBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]

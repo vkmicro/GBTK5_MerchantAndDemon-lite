@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/DelaGothicOne-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Assets/Castle.png" type="Texture" id=2]
-[ext_resource path="res://Main/Map/Cities/City_1.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Inferno.png" type="Texture" id=2]
+[ext_resource path="res://Main/Map/Cities/City_2.gd" type="Script" id=3]
 [ext_resource path="res://Main/item_for_sale.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Main/Hire_mercs.tscn" type="PackedScene" id=5]
 
@@ -18,7 +18,7 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 1 )
 
-[node name="City_1" type="Control"]
+[node name="City_2" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
@@ -47,7 +47,7 @@ margin_left = -186.0
 margin_right = 186.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 1 )
-text = "The Town of Fancy Dudes in capes!"
+text = "The Town of Fiery Pit of Hell Death kid!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -62,7 +62,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="VBoxContainer/City_info/Control"]
-position = Vector2( 0, 8.5 )
+position = Vector2( 0, 8.99999 )
 scale = Vector2( 5, 4.73438 )
 texture = ExtResource( 2 )
 
@@ -263,33 +263,33 @@ __meta__ = {
 [node name="Mercs" parent="hire_mercs_popup/VBoxContainer" instance=ExtResource( 5 )]
 margin_bottom = 121.0
 size_flags_vertical = 3
-merc_name = "Kangaroo-Knights"
-cost = 100
-fighting_power = 90
+merc_name = "Archers"
+cost = 40
+fighting_power = 30
 
 [node name="Mercs2" parent="hire_mercs_popup/VBoxContainer" instance=ExtResource( 5 )]
 margin_top = 125.0
 margin_bottom = 246.0
 size_flags_vertical = 3
-merc_name = "SPARTANS"
-cost = 300
-fighting_power = 300
+merc_name = "Swordsmen"
+cost = 50
+fighting_power = 35
 
 [node name="Mercs3" parent="hire_mercs_popup/VBoxContainer" instance=ExtResource( 5 )]
 margin_top = 250.0
 margin_bottom = 371.0
 size_flags_vertical = 3
-merc_name = "Sphinx"
-cost = 777
-fighting_power = 700
+merc_name = "Werewolf"
+cost = 500
+fighting_power = 150
 
 [node name="Mercs4" parent="hire_mercs_popup/VBoxContainer" instance=ExtResource( 5 )]
 margin_top = 375.0
 margin_bottom = 496.0
 size_flags_vertical = 3
-merc_name = "Puppies!"
-cost = 900
-fighting_power = 1200
+merc_name = "Cute fucking kittens"
+cost = 800
+fighting_power = 1000
 
 [node name="Close_hire_mercs" type="Button" parent="hire_mercs_popup"]
 anchor_right = 1.0

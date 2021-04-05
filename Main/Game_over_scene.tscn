@@ -70,5 +70,6 @@ margin_bottom = 576.0
 text = "Close_game()"
 
 [node name="Credits" parent="." instance=ExtResource( 3 )]
+visible = false
 [connection signal="pressed" from="Panel/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]

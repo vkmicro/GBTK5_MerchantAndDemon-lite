@@ -82,17 +82,15 @@ func _on_City5_escape_pressed():
 
 
 func _on_City1_pressed():
-	print("clicked city 1")
 	get_tree().change_scene("res://Main/Map/Cities/City_1.tscn")
 
 
 func _on_City2_pressed():
-	pass # Replace with function body.
-
+	get_tree().change_scene("res://Main/Map/Cities/City_2.tscn")
 
 func _on_City3_modern_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Main/Map/Cities/City_3.tscn")
 
 
 func _on_City4_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Main/Map/Cities/City_4.tscn")

@@ -16,10 +16,13 @@ func _ready():
 #	pass
 
 
-func _on_Button_pressed():
+func _on_Close_pressed():
+	get_tree().quit()
+
+func _on_Credits_pressed():
 	$Credits.show()
 
-
-
-func _on_Button2_pressed():
-	get_tree().quit()
+func _on_Timer_timeout():
+	$you_win.show()
+	$HBoxContainer.show()
+	pass # Replace with function body.

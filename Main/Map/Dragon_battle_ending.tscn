@@ -1,8 +1,68 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Main/Credits.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main/Map/Dragon_battle_ending.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Demon_battle/Demon_battle_1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Demon_battle/Untitled.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Demon_battle/Demon_battle_2.png" type="Texture" id=5]
 
 [node name="Demon_battle_ending" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -368.0
+margin_right = 512.0
+margin_bottom = 368.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 368 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 552, 88 )
+texture = ExtResource( 4 )
+
+[node name="you_win" type="Sprite" parent="."]
+visible = false
+position = Vector2( 512, 368 )
+texture = ExtResource( 5 )
+
+[node name="Credits" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 672.0
+custom_constants/separation = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="HBoxContainer"]
+margin_right = 499.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+text = "Close_game()"
+
+[node name="Credits" type="Button" parent="HBoxContainer"]
+margin_left = 524.0
+margin_right = 1024.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+text = "Credits"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+[connection signal="pressed" from="HBoxContainer/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="HBoxContainer/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

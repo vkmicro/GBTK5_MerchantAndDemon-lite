@@ -7,8 +7,8 @@ var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready(): 
 		#{itemName: price} MAX 8 items per city
-	items_default_prices = {"cat": 70, "key": 10, "panties" : 20, "staff": 30, "armor": 100, "necklace": 60, "@_@ $_$ ^_^": 999}
-	items = {"cat": 70, "key": 10, "panties" : 20, "staff": 30, "armor": 100, "necklace": 60, "@_@ $_$ ^_^": 999}
+	items_default_prices = {"kitty ears": 5, "car": 2000, "panties" : 70, "Covid-19 Vaccine": 300000, "Bullets": 100, "Guns GLORIOUS GUNS!": 666, "book": 2, "key": 5} 
+	items = {"kitty ears": 5, "car": 2000, "panties" : 70, "Covid-19 Vaccine": 300000, "Bullets": 100, "Guns GLORIOUS GUNS!": 666, "book": 2, "key": 5}
 #	print(items)
 	randomize_item_costs()
 	
@@ -20,7 +20,7 @@ func randomize_item_costs():
 	for item in items:
 		rng.randomize()
 		var new_rng_price = floor(rng.randf_range(items[item]-10,items[item]+10))
-		items[item] = new_rng_price + 2
+		items[item] = new_rng_price + 5
 
 	print(items)
 	update_gui()

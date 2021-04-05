@@ -20,6 +20,9 @@ func _process(delta):
 			print("IT'S OVER 9000!!!!!")
 			get_tree().change_scene("res://Main/Map/Dragon_battle_ending.tscn")
 			is_over_9000 = true
+	if(has_escaped):
+		get_tree().change_scene("res://Main/Map/Escaped_ending.tscn")
+		has_escaped = false
 		
 
 func change_money(amount):

@@ -1,4 +1,4 @@
-extends Control
+extends Panel
 
 
 # Declare member variables here. Examples:
@@ -16,10 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_Button_pressed():
-	$Credits.show()
-
-
-
-func _on_Button2_pressed():
+func _on_Exit_credits_pressed():
 	get_tree().quit()
