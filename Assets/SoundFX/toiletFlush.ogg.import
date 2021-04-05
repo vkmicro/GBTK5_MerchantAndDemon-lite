@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/toiletFlush.ogg-75868e69b622a8989633457194b5f11b.oggstr"
+
+[deps]
+
+source_file="res://Assets/SoundFX/toiletFlush.ogg"
+dest_files=[ "res://.import/toiletFlush.ogg-75868e69b622a8989633457194b5f11b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

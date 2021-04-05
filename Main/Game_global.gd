@@ -1,7 +1,7 @@
 extends Node
 
 var money = 300
-var has_paid_debt = false
+var has_paid_debt = true
 var time_left
 var has_escaped = false
 var inventory = {}

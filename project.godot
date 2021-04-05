@@ -23,6 +23,7 @@ config/icon="res://Assets/icon.png"
 
 GameGlobal="*res://Main/Game_global.gd"
 EconomyGlobal="*res://Main/Economy_global.gd"
+BgMusic="*res://Main/BG_Music.tscn"
 
 [display]
 

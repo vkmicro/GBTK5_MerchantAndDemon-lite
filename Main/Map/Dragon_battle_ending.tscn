@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Main/Credits.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main/Map/Dragon_battle_ending.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Demon_battle/Demon_battle_1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Demon_battle/Untitled.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Demon_battle/Demon_battle_2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/SoundFX/MyVoice/SecretEnding-Battle.wav" type="AudioStream" id=6]
 
 [node name="Demon_battle_ending" type="Control"]
 anchor_left = 0.5
@@ -60,9 +61,13 @@ size_flags_horizontal = 3
 text = "Credits"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 35.0
 one_shot = true
 autostart = true
+
+[node name="Ending_narration" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -5.0
 [connection signal="pressed" from="HBoxContainer/Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="HBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

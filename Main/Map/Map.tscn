@@ -1332,7 +1332,7 @@ clip_text = true
 position = Vector2( 160, 24 )
 scale = Vector2( 0.5, 0.52 )
 frames = SubResource( 4 )
-frame = 5
+frame = 2
 playing = true
 
 [node name="accelerate_coin_rotation" type="TextureButton" parent="Top_gui/HBoxContainer3/GUI_currency/currency_sprt"]

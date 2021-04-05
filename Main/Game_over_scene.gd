@@ -1,20 +1,16 @@
 extends Control
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if(GameGlobal.has_paid_debt):
 		$Panel/VBoxContainer/Paid.show()
 		$Panel/VBoxContainer/Not_paid.hide()
+		$Ending_paid.play()
 	else:
 		$Panel/VBoxContainer/Paid.hide()
 		$Panel/VBoxContainer/Not_paid.show()
-
+		$Ending_not_paid.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
