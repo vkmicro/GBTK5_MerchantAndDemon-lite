@@ -3,7 +3,7 @@ extends Control
 var map_width
 var map_height
 onready var color_picker = $ColorPicker
-onready var time_left = $Timer
+#onready var time_left = $Timer
 onready var money = $Top_gui/HBoxContainer3/GUI_currency/currency_amnt
 
 # Called when the node enters the scene tree for the first time.
@@ -18,11 +18,13 @@ func _process(delta):
 	map_width = get_viewport().size.x
 	map_height = get_viewport().size.y
 	update()
-	$Top_gui/HBoxContainer3/HBoxContainer/time_left.text = str(floor(time_left.time_left))
-	GameGlobal.time_left = floor(time_left.time_left)
+	$Top_gui/HBoxContainer3/HBoxContainer/time_left.text = str(floor(GlobalTimer.Glb_time_left))
+	GameGlobal.time_left = floor(GlobalTimer.Glb_time_left)
 	money.text = str(GameGlobal.money)
 	
-	if(time_left.time_left <= 0):
+	$Top_gui/HBoxContainer3/HBoxContainer2/Fighting_power_amnt.text = str(GameGlobal.fighting_power)
+	
+	if(GlobalTimer.Glb_time_left <= 0 or GameGlobal.is_time_up):
 		time_up()
 	
 	var mouse_vector = get_viewport().get_mouse_position()
@@ -42,15 +44,15 @@ func _on_ColorPicker_color_changed(color):
 	update()
 
 
-func _on_Timer_timeout(): #GAME ENDED
-	$pay_debt_popup.show()
-	if(GameGlobal.money < 5000):
-		GameGlobal.money += 5000
+#func _on_Timer_timeout(): #GAME ENDED
+#	$pay_debt_popup.show()
+#	if(GameGlobal.money < 5000):
+#		GameGlobal.money += 5000
 
 
 func _on_accelerate_coin_rotation_pressed():
 	print("coin pressed")
-	$Top_gui/GUI_currency/currency_sprt.speed_scale += .5
+	$Top_gui/HBoxContainer3/GUI_currency/currency_sprt.speed_scale += .5
 
 func time_up():
 	if(GameGlobal.money < 5000):

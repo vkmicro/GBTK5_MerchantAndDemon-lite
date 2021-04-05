@@ -16,6 +16,7 @@ func _on_Hire_pressed():
 	if(GameGlobal.money > cost and GameGlobal.money - cost > 0) :
 		GameGlobal.fighting_power += fighting_power
 		GameGlobal.change_money(-cost)
+		$AudioStreamPlayer2D.play()
 	
 #	print("merc hired")
 #	print("Fighting power: ", GameGlobal.fighting_power)

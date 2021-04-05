@@ -294,6 +294,17 @@ fighting_power = 9000
 anchor_right = 1.0
 margin_bottom = 20.0
 text = "CLOSE WINDOW"
+
+[node name="Close_hire_mercs2" type="Button" parent="hire_mercs_popup"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -280.0
+margin_top = -20.0
+margin_right = 280.0
+text = "CLOSE WINDOW"
 [connection signal="pressed" from="VBoxContainer/Buttom_menu/Map" to="." method="_on_Map_pressed"]
 [connection signal="pressed" from="VBoxContainer/Buttom_menu/Hire" to="." method="_on_Hire_pressed"]
 [connection signal="pressed" from="hire_mercs_popup/Close_hire_mercs" to="." method="_on_Close_hire_mercs_pressed"]
+[connection signal="pressed" from="hire_mercs_popup/Close_hire_mercs2" to="." method="_on_Close_hire_mercs_pressed"]

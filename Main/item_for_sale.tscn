@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/DelaGothicOne-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/icon.png" type="Texture" id=2]
 [ext_resource path="res://Main/item_for_sale.gd" type="Script" id=3]
+[ext_resource path="res://Assets/SoundFX/handleCoins.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Assets/SoundFX/beltHandle2.ogg" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -77,5 +79,13 @@ margin_bottom = 34.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
 text = "Sell"
+
+[node name="Buy" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+
+[node name="Sell" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -8.0
 [connection signal="pressed" from="HBoxContainer/Buy" to="." method="_on_Buy_pressed"]
 [connection signal="pressed" from="HBoxContainer/Sell" to="." method="_on_Sell_pressed"]

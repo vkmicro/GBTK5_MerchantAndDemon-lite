@@ -27,3 +27,4 @@ func _on_Exit_credits_pressed():
 
 func _on_Exit_pressed():
 	get_tree().quit()
+

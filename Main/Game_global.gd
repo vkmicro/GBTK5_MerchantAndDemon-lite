@@ -7,6 +7,8 @@ var has_escaped = false
 var inventory = {}
 var fighting_power = 0
 var is_over_9000 = false
+var is_time_up = false
+var is_restart = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,11 +20,18 @@ func _process(delta):
 	if(fighting_power >= 9000):
 		if(!is_over_9000):
 			print("IT'S OVER 9000!!!!!")
-			get_tree().change_scene("res://Main/Map/Dragon_battle_ending.tscn")
+			if get_tree().current_scene.name == "Map":
+				get_tree().change_scene("res://Main/Map/Dragon_battle_ending.tscn")
 			is_over_9000 = true
 	if(has_escaped):
 		get_tree().change_scene("res://Main/Map/Escaped_ending.tscn")
 		has_escaped = false
+	
+	if(is_time_up):
+		if(money < 5000):
+			money += 5000
+		#if(get_tree().current_scene.name == "Map"):
+		#	get_tree().change_scene("res://Main/Game_over_scene.tscn")
 		
 
 func change_money(amount):

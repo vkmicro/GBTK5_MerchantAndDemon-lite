@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/DelaGothicOne-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Main/Hire_mercs.gd" type="Script" id=2]
+[ext_resource path="res://Assets/SoundFX/beltHandle2.ogg" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -71,4 +72,8 @@ margin_right = 560.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 text = "Hire"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
 [connection signal="pressed" from="Hire" to="." method="_on_Hire_pressed"]

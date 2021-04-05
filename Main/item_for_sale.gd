@@ -33,6 +33,7 @@ func _on_Buy_pressed():
 		GameGlobal.add_to_inv(item_name)
 #		GameGlobal.money -= item_price
 		GameGlobal.change_money(-item_price)
+	$Buy.play()
 
 
 func _on_Sell_pressed():
@@ -41,6 +42,7 @@ func _on_Sell_pressed():
 	if(GameGlobal.inventory.has(item_name)):
 		GameGlobal.remove_from_inv(item_name)
 		GameGlobal.change_money(item_price)
+	$Sell.play()
 	
 func update_info(name,price):
 	$HBoxContainer/Item_name.text = name
