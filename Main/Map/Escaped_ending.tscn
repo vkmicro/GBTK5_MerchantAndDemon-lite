@@ -69,6 +69,6 @@ visible = false
 
 [node name="ending_narration" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
-volume_db = -5.0
+volume_db = -2.0
 [connection signal="pressed" from="Panel/VBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
